@@ -17,8 +17,12 @@ class ATreasureHunterCharacter : public ACharacter
 	class UCameraComponent* FollowCamera;
 
 	/** Scanning sphere */
-	UPROPERTY(VisibleAnywhere, BlueprintReadOnly, Category = Camera, meta = (AllowPrivateAccess = "true"))
+	UPROPERTY(VisibleAnywhere, BlueprintReadOnly, Category = "Scanning", meta = (AllowPrivateAccess = "true"))
 	class USphereComponent* ScanningSphere;
+
+	/** Modes queue */
+	TQueue<int32> ModesQueue;
+
 public:
 	ATreasureHunterCharacter();
 
@@ -62,8 +66,28 @@ protected:
 	// End of APawn interface
 
 	/** Called when we press a key to scan any scannables in scan sphere*/
-	UFUNCTION(BlueprintCallable, Category = "Scannable")
+	UFUNCTION(BlueprintCallable, Category = "Scanning")
 	void Scan();
+
+	/** Scanning objects and setting fire to them*/
+	UFUNCTION(BlueprintCallable, Category = "Scanning")
+	void ScanMode0(TArray<AActor*> ScannedActors);
+
+	/** Scanning objects and destroying them*/
+	UFUNCTION(BlueprintCallable, Category = "Scanning")
+	void ScanMode1(TArray<AActor*> ScannedActors);
+
+	/** Lifting scannable objects(without marking them as scanned)*/
+	UFUNCTION(BlueprintCallable, Category = "Scanning")
+	void ScanMode2(TArray<AActor*> ScannedActors);
+
+	/** Logging distance from scannable objects to player*/
+	UFUNCTION(BlueprintCallable, Category = "Scanning")
+	void ScanMode3(TArray<AActor*> ScannedActors);
+
+	/** Called when we press a key to scan any scannables in scan sphere*/
+	UFUNCTION(BlueprintCallable, Category = "Scanning")
+	void ChangeMode();
 
 public:
 	/** Returns CameraBoom subobject **/
