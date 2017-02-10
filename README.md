@@ -19,6 +19,7 @@ At this time there are 4 different scaning modes available in the class *ATreasu
 In order for your object to be scannable, it **must** inherit from the *Scannable* class.
 
 
+
 **[BG]**
 Plugin, който да улеснява интегрирането на скрити „съкровища“ в
 дадена игра. Главния герой има възможността да прави централизирано сканиране тип
