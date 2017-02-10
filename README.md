@@ -2,7 +2,7 @@
 
 ###Treasure Hunter | Unreal Engine 4 Plugin###
 
-**EN**
+**[EN]**
 Tresure Hunter is a plugin, which eases the integration of hidden tresures in a game.
 The main player has the ability to  scan ("are of effect" type scanning) for hidden objects around his position.
 That way, the player reveals interactable objects, which previously had been hidden. There are some basic 
@@ -18,7 +18,8 @@ At this time there are 4 different scaning modes available in the class *ATreasu
   
 In order for your object to be scannable, it **must** inherit from the *Scannable* class.
 
-**BG**
+
+**[BG]**
 Plugin, който да улеснява интегрирането на скрити „съкровища“ в
 дадена игра. Главния герой има възможността да прави централизирано сканиране тип
 Area of Effect около себе си, като по този начин открива interactible обекти, с които
