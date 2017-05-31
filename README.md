@@ -1,6 +1,6 @@
-##Game Engine Architecture @ FMI | 2016
+## Game Engine Architecture @ FMI | 2016
 
-###Treasure Hunter | Unreal Engine 4 Plugin###
+### Treasure Hunter | Unreal Engine 4 Plugin###
 
 **[EN]**
 Tresure Hunter is a plugin, which eases the integration of hidden tresures in a game.
